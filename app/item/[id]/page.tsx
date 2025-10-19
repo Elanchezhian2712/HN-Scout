@@ -6,8 +6,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { formatDistanceToNow } from "date-fns";
 import { ExternalLink, MessageSquare, Star, User, Clock, Link as LinkIcon } from "lucide-react";
+interface CommentType {
+  id: number;
+  author: string | null;
+  text: string | null;
+  created_at_i: number;
+}
 
-function Comment({ comment }: { comment: any }) {
+function Comment({ comment }: { comment: CommentType }) {
     if (!comment || !comment.author || !comment.text) return null;
     const timeAgo = formatDistanceToNow(new Date(comment.created_at_i * 1000), { addSuffix: true });
     return (

@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useDebounce } from 'use-debounce';
 import { HnHit } from '@/lib/api';
@@ -36,7 +36,7 @@ export function StoryList({ initialStories }: StoryListProps) {
 
   const { ref, inView } = useInView({ threshold: 0.5 });
 
-  const loadMoreStories = async () => {
+  const loadMoreStories = useCallback(async () => {
     if (isLoading || !hasMore) return;
     setIsLoading(true);
     const newStories = await fetchAndScoreStories(page, debouncedFilter);
@@ -47,13 +47,14 @@ export function StoryList({ initialStories }: StoryListProps) {
       setHasMore(false);
     }
     setIsLoading(false);
-  };
+  }, [isLoading, hasMore, page, debouncedFilter]);
   
   useEffect(() => {
     if (inView) {
       loadMoreStories();
     }
-  }, [inView]);
+  }, [inView, loadMoreStories]);
+  
 
   useEffect(() => {
     const applyFilter = async () => {
@@ -92,7 +93,7 @@ export function StoryList({ initialStories }: StoryListProps) {
       {hasMore && !isLoading && <div ref={ref} className="h-10" />}
 
       {!hasMore && !isLoading && stories.length > 0 && (
-        <p className="text-center text-slate-400 py-8">You've reached the end.</p>
+        <p className="text-center text-slate-400 py-8">You&apos;ve reached the end.</p>
       )}
     </div>
   );

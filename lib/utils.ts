@@ -11,7 +11,7 @@ export function getDomainFromUrl(urlString: string): string | null {
   try {
     const url = new URL(urlString);
     return url.hostname.replace(/^www\./, '');
-  } catch (error) {
+  } catch { 
     return null;
   }
 }

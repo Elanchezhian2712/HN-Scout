@@ -1,7 +1,7 @@
 // app/actions.ts
 'use server';
 
-import { HnHit, fetchStories } from "@/lib/api";
+import { HnHit } from "@/lib/api";
 import { calculateQualityScore } from "@/lib/scoring";
 
 const API_BASE = "https://hn.algolia.com/api/v1";
