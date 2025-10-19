@@ -56,7 +56,7 @@ AI tools like GitHub Copilot and Google AI Studio accelerated development by ass
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/Elanchezhian2712/HN-Scout-.git
+    git clone https://github.com/Elanchezhian2712/HN-Scout.git
     ```
 2.  Navigate to the directory:
     ```bash
