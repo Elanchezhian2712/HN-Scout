@@ -70,4 +70,8 @@ AI tools like GitHub Copilot and Google AI Studio accelerated development by ass
     ```bash
     npm run dev
     ```
+<<<<<<< HEAD
 5.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+=======
+5.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+>>>>>>> 519e0a5abb8f10b707d0dad9e63d37472f94ca64
