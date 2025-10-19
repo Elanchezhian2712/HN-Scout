@@ -2,9 +2,9 @@
 
 A modern Hacker News client built with Next.js to surface high-quality stories via a custom ranking algorithm. Completed as a 3-day technical assessment.
 
-**Live Deployment:** [https://hn-scout.vercel.app/](https://hn-scout.vercel.app/)
+**Live Deployment:** https://hn-scout-seven.vercel.app/
 
-![Screenshot of HN Scout](./public/screenshot.png)
+<img width="1918" height="960" alt="image" src="https://github.com/user-attachments/assets/3ffd4e8d-f17b-4454-8092-110813580474" />
 
 ---
 
